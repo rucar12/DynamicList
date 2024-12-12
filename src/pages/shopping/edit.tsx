@@ -1,17 +1,18 @@
-import { Modal } from '../../components/modal'
+import { Modal } from '../../components'
 import { CustomForm } from '../../components'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
+import { usePreserveSearchParams } from '../../hooks/usePreserveSearchParams.tsx'
 
 const ShoppingEditPage = () => {
   const { id } = useParams()
-  const navigate = useNavigate()
+  const navigateWithParams = usePreserveSearchParams()
 
   const onFinish = () => {
-    navigate('/')
+    navigateWithParams('/')
   }
 
   return (
-    <Modal isOpen={true} onClose={onFinish}>
+    <Modal title={<h2>Edit product</h2>} isOpen={true} onClose={onFinish}>
       <CustomForm editingItemId={id} redirect={onFinish} />
     </Modal>
   )

@@ -1,8 +1,48 @@
+@use '../../styles/colors' as colors;
+
 .button {
   border: 1px solid #fff;
   border-radius: 12px;
-  padding: 8px 12px;
   background: #fff;
-  font-size: 16px;
   cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  &.primary {
+    background-color: colors.$primary-btn;
+    color: colors.$primary-text;
+    border: 1px solid colors.$border;
+
+    &:hover {
+      background-color: colors.$primary-btn-hover;
+    }
+  }
+
+  &.default {
+    background-color: colors.$default-btn;
+    color: colors.$primary-bg;
+    border: 1px solid colors.$primary-bg;
+
+    &:hover {
+      background-color: colors.$default-btn-hover;
+      border-color: colors.$general;
+    }
+  }
+
+  &.medium {
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+
+  &.small {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+
+  &.big {
+    padding: 12px 16px;
+    font-size: 18px;
+  }
 }

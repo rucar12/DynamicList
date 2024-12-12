@@ -1,0 +1,6 @@
+export { BackArrowSVG } from './backArrowSVG.tsx'
+export { EditSVG } from './editSVG.tsx'
+export { InCartSVG } from './inCartSVG.tsx'
+export { ToCartSVG } from './toCartSVG.tsx'
+export { CreateSVG } from './createSVG.tsx'
+export { DeleteSVG } from './deleteSVG.tsx'

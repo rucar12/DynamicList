@@ -1,2 +1,157 @@
+@use '../../styles/colors' as colors;
+@use '../../styles/typography' as typography;
+
 .list {
+  padding: 20px;
+
+  .topDecorate,
+  .topDecorateDoubled {
+    position: absolute;
+    box-shadow: 3px 15px 50px #fff;
+    top: -10px;
+    left: 20%;
+    width: 200px;
+    height: 20px;
+    background: #ffffff;
+    border-radius: 50%;
+  }
+
+  .topDecorateDoubled {
+    left: 70%;
+  }
+
+  .bottomDecorate1,
+  .bottomDecorate2,
+  .bottomDecorate3 {
+    position: absolute;
+    bottom: 20px;
+    filter: blur(25px);
+    width: 60px;
+    height: 20px;
+    border-radius: 50%;
+  }
+
+  .bottomDecorate1 {
+    box-shadow: 3px 15px 50px #44e;
+    left: 10%;
+    bottom: 40%;
+    height: 100px;
+    width: 200px;
+    background: #44e;
+  }
+
+  .bottomDecorate2 {
+    box-shadow: 3px 15px 50px #44e;
+    left: 50%;
+    width: 150px;
+    background: #44e;
+  }
+
+  .bottomDecorate3 {
+    box-shadow: 3px 15px 50px #44e;
+    left: 90%;
+    width: 150px;
+    height: 300px;
+    background: #44e;
+    bottom: 20%;
+  }
+
+  h1 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .topBar {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+
+    button {
+      font-size: typography.$regular-text;
+    }
+  }
+
+  .tableContainer {
+    max-height: 78vh;
+    overflow-y: auto;
+    position: relative;
+    border: 1px solid colors.$border;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: colors.$secondary-bg;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: colors.$border;
+      border-radius: 4px;
+    }
+  }
+
+  .categoryGroup {
+    margin-bottom: 20px;
+
+    .categoryTitle {
+      margin: 10px 0 20px;
+      font-size: typography.$heading-2;
+      color: colors.$general;
+    }
+
+    .table {
+      gap: 10px;
+
+      .header {
+        display: grid;
+        grid-template-columns: 8fr 2fr 2fr;
+        font-size: typography.$subtitle;
+        color: colors.$secondary-text;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: 8fr 2fr 2fr;
+    align-items: center;
+    padding: 8px;
+    transition: background-color ease 0.3s;
+    border-radius: 12px;
+
+    &:nth-child(odd) {
+      background-color: colors.$odd-row-bg;
+    }
+
+    &:nth-child(even) {
+      background-color: colors.$even-row-bg;
+    }
+
+    &:hover {
+      background-color: colors.$hover-row-bg;
+    }
+
+    span {
+      padding: 8px 0;
+    }
+
+    a {
+      color: colors.$general;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .actions {
+    display: flex;
+    gap: 10px;
+  }
 }

@@ -6,19 +6,20 @@ import {
   Dispatch,
   SetStateAction,
 } from 'react'
-import MOCK_ITEMS from '../data/mocks.json'
+import MOCK_ITEMS from '../data/mocksProducts.json'
 
 export type ShoppingItem = {
-  id: number
+  id: string
   name: string
   quantity: number
   category: string
+  purchased: boolean
 }
 
 type ShoppingListContextType = {
   items: ShoppingItem[]
   setItems: Dispatch<SetStateAction<ShoppingItem[]>>
-  deleteItem: (id: number) => void
+  deleteItem: (id: string) => void
   createItem: (data: ShoppingItem) => void
   editItem: (data: ShoppingItem) => void
 }
@@ -42,7 +43,7 @@ export const ShoppingListProvider = ({ children }) => {
     }
   }, [])
 
-  const deleteItem = (id: number) => {
+  const deleteItem = (id: string) => {
     const updatedItems = items.filter((prev) => prev.id !== id)
     setItems(updatedItems)
     localStorage.setItem('products', JSON.stringify(updatedItems))
@@ -56,7 +57,7 @@ export const ShoppingListProvider = ({ children }) => {
 
   const editItem = (data: ShoppingItem) => {
     const updatedItems = items.map((prev) => {
-      return Number(prev.id) === data.id
+      return prev.id === data.id
         ? {
             ...prev,
             ...data,

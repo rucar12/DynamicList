@@ -1,0 +1,71 @@
+@use '../../../styles/colors' as colors;
+@use '../../../styles/typography' as typography;
+
+.page {
+  padding: 20px;
+
+  .backButton {
+    margin-bottom: 20px;
+  }
+
+  .card {
+    display: flex;
+    gap: 20px;
+    background-color: colors.$secondary-bg;
+    border: 1px solid colors.$border;
+    border-radius: 8px;
+    padding: 20px;
+
+    .imageContainer {
+      flex: 1;
+      background: colors.$primary-bg;
+      border-radius: 12px;
+
+      .image {
+        max-width: 100%;
+        border-radius: 8px;
+      }
+    }
+
+    .detailsContainer {
+      flex: 2;
+
+      .title {
+        font-size: typography.$heading-1;
+        margin-bottom: 10px;
+      }
+
+      .category,
+      .description,
+      .quantity,
+      .price {
+        font-size: typography.$regular-text;
+        margin-bottom: 8px;
+      }
+
+      .actions {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+
+        .editButton {
+          background-color: colors.$success;
+          color: colors.$primary-text;
+
+          &:hover {
+            background-color: colors.$general;
+          }
+        }
+
+        .deleteButton {
+          background-color: colors.$error;
+          color: colors.$primary-text;
+
+          &:hover {
+            background-color: colors.$primary-btn-hover;
+          }
+        }
+      }
+    }
+  }
+}
