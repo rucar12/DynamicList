@@ -4,7 +4,7 @@ import { lazy } from 'react'
 const ShoppingList = lazy(() => import('../pages/shopping/list.tsx'))
 const ShoppingListEdit = lazy(() => import('../pages/shopping/edit.tsx'))
 const ShoppingListCreate = lazy(() => import('../pages/shopping/create.tsx'))
-const ShoppingPage = lazy(() => import('../pages/shopping/page.tsx'))
+const ShoppingPage = lazy(() => import('../pages/shopping/page/page.tsx'))
 
 export const routes = createBrowserRouter([
   {

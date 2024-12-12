@@ -1,0 +1,8 @@
+@use '../../styles/colors' as colors;
+@use '../../styles/typography' as typography;
+
+.filter {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}

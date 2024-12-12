@@ -1,0 +1,79 @@
+@use '../../styles/colors' as colors;
+@use '../../styles/typography' as typography;
+
+.inputNumberWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  margin-bottom: 16px;
+
+  .label {
+    font-size: typography.$secondary-text;
+    color: colors.$primary-text;
+    font-weight: 600;
+  }
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  border: 1px solid colors.$border;
+  background-color: colors.$secondary-bg;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+
+  &:focus-within {
+    border-color: colors.$general;
+  }
+
+  &.error {
+    border-color: colors.$error;
+  }
+}
+
+.button {
+  padding: 8px;
+  font-size: typography.$regular-text;
+  color: colors.$primary-text;
+  background-color: colors.$secondary-bg;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: colors.$primary-bg;
+  }
+
+  &:disabled {
+    background-color: colors.$border;
+    cursor: not-allowed;
+  }
+}
+
+.input {
+  width: 60px;
+  text-align: center;
+  padding: 8px;
+  font-size: typography.$regular-text;
+  border: none;
+  outline: none;
+  background-color: colors.$secondary-bg;
+  color: colors.$primary-text;
+
+  //Deleted input number default arrows
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+  appearance: none;
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.errorMessage {
+  color: colors.$error;
+  font-size: typography.$error-text;
+  margin-top: 4px;
+}

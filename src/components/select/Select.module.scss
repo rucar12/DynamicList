@@ -1,0 +1,61 @@
+@use '../../styles/colors' as colors;
+@use '../../styles/typography' as typography;
+
+.selectWrapper {
+  position: relative;
+
+  .label {
+    font-size: typography.$secondary-text;
+    color: colors.$primary-text;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .selectContainer {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+
+    .select {
+      width: 100%;
+      min-width: 160px;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid colors.$border;
+      background-color: colors.$secondary-bg;
+      color: colors.$primary-text;
+      border-radius: 8px;
+      appearance: none;
+      transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+      cursor: pointer;
+
+      &:focus {
+        border-color: colors.$general;
+        box-shadow: 0 0 4px colors.$general;
+        outline: none;
+      }
+
+      &.error {
+        border-color: colors.$error;
+      }
+    }
+  }
+
+  .selectArrow {
+    position: absolute;
+    top: 50%; // Center vertically
+    right: 12px; // Align with the input
+    transform: translateY(-50%); // Adjust position for centering
+    pointer-events: none;
+    color: colors.$primary-text;
+    font-size: 12px; // Match the size of the arrow
+  }
+
+  .errorMessage {
+    color: colors.$error;
+    font-size: typography.$error-text;
+    margin-top: 4px;
+  }
+}

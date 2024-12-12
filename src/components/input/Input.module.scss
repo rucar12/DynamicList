@@ -1,0 +1,46 @@
+@use '../../styles/colors' as colors;
+@use '../../styles/typography' as typography;
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.label {
+  font-size: typography.$secondary-text;
+  color: colors.$primary-text;
+  font-weight: 600;
+}
+
+.input {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid colors.$border;
+  background-color: colors.$secondary-bg;
+  color: colors.$primary-text;
+  border-radius: 8px;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+
+  &:focus {
+    border-color: colors.$general;
+    box-shadow: 0 0 4px colors.$general;
+    outline: none;
+  }
+
+  &.error {
+    border-color: colors.$error;
+  }
+
+  &::placeholder {
+    color: colors.$secondary-text;
+  }
+}
+
+.errorMessage {
+  color: colors.$error;
+  font-size: typography.$error-text;
+  margin-top: 4px;
+}
