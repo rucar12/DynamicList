@@ -4,12 +4,37 @@
 .page {
   padding: 20px;
 
+  .decorate1 {
+    position: fixed;
+    top: 20%;
+    left: 5%;
+    width: 250px;
+    height: 150px;
+    border-radius: 50%;
+    filter: blur(25px);
+    background: colors.$general;
+    z-index: 0;
+  }
+
+  .decorate2 {
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+    width: 350px;
+    height: 150px;
+    border-radius: 50%;
+    filter: blur(55px);
+    background: colors.$general;
+  }
+
   .backButton {
     margin-bottom: 20px;
   }
 
   .card {
     display: flex;
+    position: relative;
+    z-index: 1;
     gap: 20px;
     background-color: colors.$secondary-bg;
     border: 1px solid colors.$border;
@@ -32,6 +57,7 @@
 
       .title {
         font-size: typography.$heading-1;
+        color: colors.$general;
         margin-bottom: 10px;
       }
 
@@ -67,5 +93,9 @@
         }
       }
     }
+  }
+
+  .generalColor {
+    color: colors.$general;
   }
 }

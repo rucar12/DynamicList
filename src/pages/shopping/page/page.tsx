@@ -22,6 +22,8 @@ const ShoppingPage = () => {
 
   return (
     <div className={styles.page}>
+      <div className={styles.decorate1} />
+      <div className={styles.decorate2} />
       <Button
         onClick={() => navigate(-1)}
         customTypes={ButtonTypes.primary}
@@ -39,9 +41,15 @@ const ShoppingPage = () => {
           <p className={styles.category}>Category: {currentProduct.category}</p>
           <p className={styles.description}>{fakeProduct.description}</p>
           <p className={styles.quantity}>
-            Available Quantity: {currentProduct.quantity}
+            Available Quantity:{' '}
+            <span className={styles.generalColor}>
+              {currentProduct.quantity}
+            </span>
           </p>
-          <p className={styles.price}>Price: {fakeProduct.price}</p>
+          <p className={styles.price}>
+            Price:{' '}
+            <span className={styles.generalColor}>{fakeProduct.price}</span>
+          </p>
         </div>
       </div>
     </div>

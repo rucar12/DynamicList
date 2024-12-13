@@ -32,27 +32,26 @@
   }
 
   .bottomDecorate1 {
-    box-shadow: 3px 15px 50px #44e;
     left: 10%;
     bottom: 40%;
     height: 100px;
     width: 200px;
-    background: #44e;
+    background: colors.$general;
   }
 
   .bottomDecorate2 {
-    box-shadow: 3px 15px 50px #44e;
+    box-shadow: 3px 15px 50px colors.$general;
     left: 50%;
     width: 150px;
-    background: #44e;
+    background: colors.$general;
   }
 
   .bottomDecorate3 {
-    box-shadow: 3px 15px 50px #44e;
+    box-shadow: 3px 15px 50px colors.$general;
     left: 90%;
     width: 150px;
     height: 300px;
-    background: #44e;
+    background: colors.$general;
     bottom: 20%;
   }
 

@@ -2,105 +2,105 @@
   {
     "name": "Small Steel Sausages",
     "category": "Dairy",
-    "quantity": "88",
+    "quantity": 88,
     "id": "407311903382207300",
     "purchased": false
   },
   {
     "name": "Ergonomic Granite Chicken",
     "category": "Vegetables",
-    "quantity": "61",
+    "quantity": 61,
     "id": "928455159918200400",
     "purchased": false
   },
   {
     "name": "Rustic Cotton Sausages",
     "category": "Dairy",
-    "quantity": "16",
+    "quantity": 16,
     "id": "261148974302998100",
     "purchased": false
   },
   {
     "name": "Luxurious Rubber Keyboard",
     "category": "Dairy",
-    "quantity": "22",
+    "quantity": 22,
     "id": "407828379720166700",
     "purchased": false
   },
   {
     "name": "Intelligent Frozen Towels",
     "category": "Fruits",
-    "quantity": "3",
+    "quantity": 3,
     "id": "545102225189811260",
     "purchased": false
   },
   {
     "name": "Recycled Fresh Shirt",
     "category": "Dairy",
-    "quantity": "22",
+    "quantity": 2,
     "id": "886767720305293200",
     "purchased": false
   },
   {
     "name": "Gorgeous Rubber Tuna",
     "category": "Dairy",
-    "quantity": "31",
+    "quantity": 31,
     "id": "988818059383008100",
     "purchased": false
   },
   {
     "name": "Modern Wooden Computer",
     "category": "Vegetables",
-    "quantity": "16",
+    "quantity": 16,
     "id": "139980547742951410",
     "purchased": false
   },
   {
     "name": "Oriental Cotton Bacon",
     "category": "Dairy",
-    "quantity": "39",
+    "quantity": 39,
     "id": "701431213527614000",
     "purchased": false
   },
   {
     "name": "Oriental Frozen Towels",
     "category": "Vegetables",
-    "quantity": "45",
+    "quantity": 45,
     "id": "465864250162645570",
     "purchased": false
   },
   {
     "name": "Luxurious Soft Computer",
     "category": "Vegetables",
-    "quantity": "35",
+    "quantity": 35,
     "id": "982440291567191300",
     "purchased": false
   },
   {
     "name": "Rustic Frozen Bacon",
     "category": "Dairy",
-    "quantity": "43",
+    "quantity": 43,
     "id": "386405956104398400",
     "purchased": false
   },
   {
     "name": "Practical Rubber Gloves",
     "category": "Vegetables",
-    "quantity": "88",
+    "quantity": 88,
     "id": "739626136603407000",
     "purchased": false
   },
   {
     "name": "Tasty Plastic Pizza",
     "category": "Vegetables",
-    "quantity": "62",
+    "quantity": 62,
     "id": "612487479101544800",
     "purchased": false
   },
   {
     "name": "Awesome Steel Gloves",
     "category": "Dairy",
-    "quantity": "60",
+    "quantity": 60,
     "id": "631771570139116500",
     "purchased": false
   }

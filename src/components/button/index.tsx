@@ -1,5 +1,5 @@
 import styles from './Button.module.scss'
-import { FC } from 'react'
+import { FC, ReactNode } from 'react'
 
 export enum ButtonTypes {
   primary = 'primary',
@@ -17,6 +17,7 @@ interface ButtonProps {
   className?: string
   type?: 'submit' | 'reset'
   title?: string
+  children?: ReactNode
 }
 
 export const Button: FC<ButtonProps> = ({
