@@ -21,7 +21,7 @@ export const CustomForm: React.FC<FormProps> = ({
 
   // Form values
   const [name, setName] = useState<string | undefined>(undefined)
-  const [quantity, setQuantity] = useState<number | undefined>(0)
+  const [quantity, setQuantity] = useState<number>(0)
   const [category, setCategory] = useState<string | undefined>(undefined)
 
   // Form errors
@@ -36,12 +36,12 @@ export const CustomForm: React.FC<FormProps> = ({
   const currentItem = items.find((item) => item.id === editingItemId)
 
   useEffect(() => {
-    if (editingItemId) {
+    if (editingItemId && currentItem) {
       setCategory(currentItem.category)
       setName(currentItem.name)
       setQuantity(currentItem.quantity)
     }
-  }, [editingItemId])
+  }, [editingItemId, currentItem])
 
   const handleAddOrEditItem = (e: FormEvent) => {
     e.preventDefault()
@@ -65,7 +65,7 @@ export const CustomForm: React.FC<FormProps> = ({
           quantity,
           category,
           id: editingItemId,
-          purchased: currentItem.purchased,
+          purchased: currentItem?.purchased ?? false,
         })
         !!redirect && redirect()
       } else {
@@ -80,9 +80,9 @@ export const CustomForm: React.FC<FormProps> = ({
       }
     }
 
-    setName(undefined)
-    setCategory(undefined)
-    setQuantity(undefined)
+    // setName(undefined)
+    // setCategory(undefined)
+    // setQuantity(0)
   }
 
   return (

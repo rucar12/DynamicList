@@ -5,6 +5,7 @@ import {
   useEffect,
   Dispatch,
   SetStateAction,
+  ReactNode,
 } from 'react'
 import MOCK_ITEMS from '../data/mocksProducts.json'
 
@@ -24,19 +25,25 @@ type ShoppingListContextType = {
   editItem: (data: ShoppingItem) => void
 }
 
+interface ShoppingListProviderProps {
+  children: ReactNode
+}
+
 // Context for managing the shopping list
 const ShoppingListContext = createContext<ShoppingListContextType | undefined>(
   undefined
 )
 
-export const ShoppingListProvider = ({ children }) => {
+export const ShoppingListProvider = ({
+  children,
+}: ShoppingListProviderProps) => {
   const [items, setItems] = useState<ShoppingItem[]>([])
 
   useEffect(() => {
     const localItems = localStorage.getItem('products')
 
     if (!localItems || !JSON.parse(localItems).length) {
-      setItems(MOCK_ITEMS)
+      setItems(MOCK_ITEMS as ShoppingItem[])
       localStorage.setItem('products', JSON.stringify(MOCK_ITEMS))
     } else {
       setItems(JSON.parse(localItems))

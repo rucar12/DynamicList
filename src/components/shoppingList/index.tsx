@@ -55,7 +55,7 @@ export const ShoppingList: FC = () => {
           selectedCategory={selectedFilter}
           setSelectedCategory={setSelectedFilter}
         />
-        <Button onClick={handleCreateClick} variant="primary">
+        <Button onClick={handleCreateClick}>
           <CreateSVG /> Create New Product
         </Button>
       </div>
